@@ -16,6 +16,9 @@ password is "temppwd") and install Klipper by running the following
 commands:
 ```
 git clone https://github.com/KevinOConnor/klipper
+sudo chmod +x ./klipper/scripts/install-debian.sh
+sudo chmod +x ./klipper/scripts/klipper-pru-start.sh
+sudo chmod +x ./klipper/scripts/install-beaglebone
 ./klipper/scripts/install-beaglebone.sh
 ```
 
@@ -62,6 +65,8 @@ To compile the Klipper micro-controller code, start by configuring it
 for the "Beaglebone PRU":
 ```
 cd ~/klipper/
+sudo apt-get update
+sudo apt-get install pru-gcc
 make menuconfig
 ```
 
